@@ -1,0 +1,81 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;*******************************************************
+                       ************************
+    2 00000000         ;* File Name          : learn_float.s
+    3 00000000         ;* Author             : Lighting_WZ
+    4 00000000         ;* Description        : ARM_ASM_Learn 
+    5 00000000         ;*******************************************************
+                       ************************
+    6 00000000         
+    7 00000000                 AREA             CODE_SEGMENT, CODE, READONLY
+    8 00000000         
+    9 00000000                 ENTRY
+   10 00000000         
+   11 00000000                 IMPORT           TEST_Function
+   12 00000000                 EXPORT           __main
+   13 00000000         
+   14 00000000         __main
+   15 00000000         
+   16 00000000         start
+   17 00000000 F04F 0001       MOV              R0,#1
+   18 00000004         
+   19 00000004                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
+interwork --depend=.\objects\learn_float.d -o.\objects\learn_float.o -I.\RTE\_T
+arget_1 -IC:\Users\LT\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Includ
+e -IC:\Users\LT\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS
+\Device\ST\STM32F4xx\Include --predefine="__UVISION_VERSION SETA 536" --predefi
+ne="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --predefine="_RTE_ SETA 1" -
+-list=.\listings\learn_float.lst learn_float.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+CODE_SEGMENT 00000000
+
+Symbol: CODE_SEGMENT
+   Definitions
+      At line 7 in file learn_float.s
+   Uses
+      None
+Comment: CODE_SEGMENT unused
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 14 in file learn_float.s
+   Uses
+      At line 12 in file learn_float.s
+Comment: __main used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 16 in file learn_float.s
+   Uses
+      None
+Comment: start unused
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+TEST_Function 00000000
+
+Symbol: TEST_Function
+   Definitions
+      At line 11 in file learn_float.s
+   Uses
+      None
+Comment: TEST_Function unused
+1 symbol
+338 symbols in table

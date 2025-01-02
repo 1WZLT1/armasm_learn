@@ -1,0 +1,98 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;*******************************************************
+                       ************************
+    2 00000000         ;* File Name          : learn_constant.s
+    3 00000000         ;* Author             : Lighting_WZ
+    4 00000000         ;* Description        : ARM_ASM_Learn 
+    5 00000000         ;*******************************************************
+                       ************************
+    6 00000000         
+    7 00000000                 AREA             CODE_SEGMENT, CODE, READONLY
+    8 00000000         
+    9 00000000                 ENTRY
+   10 00000000         
+   11 00000000                 IMPORT           TEST_Function
+   12 00000000                 EXPORT           __main
+   13 00000000         
+   14 00000000         __main
+   15 00000000         
+   16 00000000         start
+   17 00000000 F04F 0501       MOV              R5,#1
+   18 00000004 F04F 0601       MOV              R6,#0x01
+   19 00000008 F04F 0704       MOV              R7,#2_100
+   20 0000000C         
+   21 0000000C         ;带FPU浮点数写入
+   22 0000000C         ;LDR      R0,=0x20000000
+   23 0000000C         ;VMOV.F32 S0,#3
+   24 0000000C         ;VSTR     S0,[R0,#0x00]
+   25 0000000C         
+   26 0000000C         ;不带FPU浮点数写入
+   27 0000000C F04F 5000       LDR              R0,=0x20000000
+   28 00000010 F04F 4180       MOV              R1,#0x40000000
+   29 00000014 6001            STR              R1,[R0,#0x00]
+   30 00000016         
+   31 00000016 4801            LDR              R0,=TEST_Function
+   32 00000018 4700            BX               R0
+   33 0000001A         
+   34 0000001A                 END
+              00 00 00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
+interwork --depend=.\objects\learn_constant_1.d -o.\objects\learn_constant_1.o 
+-I.\RTE\_Target_1 -IC:\Users\LT\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\C
+ore\Include -IC:\Users\LT\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Dri
+vers\CMSIS\Device\ST\STM32F4xx\Include --predefine="__UVISION_VERSION SETA 536"
+ --predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --predefine="_RTE_
+ SETA 1" --list=.\listings\learn_constant.lst Learn_File\constant\learn_constan
+t.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+CODE_SEGMENT 00000000
+
+Symbol: CODE_SEGMENT
+   Definitions
+      At line 7 in file Learn_File\constant\learn_constant.s
+   Uses
+      None
+Comment: CODE_SEGMENT unused
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 14 in file Learn_File\constant\learn_constant.s
+   Uses
+      At line 12 in file Learn_File\constant\learn_constant.s
+Comment: __main used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 16 in file Learn_File\constant\learn_constant.s
+   Uses
+      None
+Comment: start unused
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+TEST_Function 00000000
+
+Symbol: TEST_Function
+   Definitions
+      At line 11 in file Learn_File\constant\learn_constant.s
+   Uses
+      At line 31 in file Learn_File\constant\learn_constant.s
+Comment: TEST_Function used once
+1 symbol
+340 symbols in table
