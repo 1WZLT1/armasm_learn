@@ -1,3 +1,8 @@
+;*******************************************************************************
+;* File Name          : learn_constant.s
+;* Author             : Lighting_WZ
+;* Description        : ARM_ASM_Learn 
+;*******************************************************************************
  AREA subrot, CODE, READONLY
 		ENTRY
 		
